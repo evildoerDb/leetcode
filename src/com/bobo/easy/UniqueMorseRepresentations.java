@@ -12,6 +12,11 @@ import java.util.HashSet;
  */
 public class UniqueMorseRepresentations {
 
+    /**
+     * 自己写的
+     * @param words
+     * @return
+     */
     public static int uniqueMorseRepresentations(String[] words) {
         HashSet<String> set = new HashSet<>();
         HashMap<String,String> map = new HashMap<>();
@@ -35,9 +40,26 @@ public class UniqueMorseRepresentations {
         return set.size();
     }
 
+    /**
+     * 最优解 亮点在于str[word.charAt(i) - 'a']
+     * @param words
+     * @return
+     */
+    public static int uniqueMorseRepresentations2(String[] words){
+        HashSet<String> set = new HashSet<>();
+        String[] str ={".-","-...","-.-.","-..",".","..-.","--.","....","..",".---","-.-",".-..","--","-.","---",".--.","--.-",".-.","...","-","..-","...-",".--","-..-","-.--","--.."};
+        for (String word : words){
+            StringBuilder sb = new StringBuilder();
+            for (int i = 0 ; i < word.length(); i++){
+                sb.append(str[word.charAt(i) - 'a']);
+            }
+            set.add(sb.toString());
+        }
+        return set.size();
+    }
     public static void main(String[] args) {
        String[] words = {"gin", "zen", "gig", "msg"};
-       int times = uniqueMorseRepresentations(words);
+       int times = uniqueMorseRepresentations2(words);
         System.out.println(times);
 
 
