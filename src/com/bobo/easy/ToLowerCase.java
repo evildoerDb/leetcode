@@ -10,11 +10,15 @@ public class ToLowerCase {
 
     /**
      * 不要脸的方法
+     *
+     *
      * @param str
      * @return
      */
     public static String toLowerCase(String str) {
 
+        //TODO
+        //待使用最优解
         return str.toLowerCase();
     }
 
