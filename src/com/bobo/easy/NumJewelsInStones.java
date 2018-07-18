@@ -3,7 +3,7 @@ package com.bobo.easy;
 import java.util.HashMap;
 
 /**
- * Created by bobo.dou@weimob.com on 2018/7/17 16:56
+ * Created by evildoerDb on 2018/7/17 16:56
  *
  * You're given strings J representing the types of stones that are jewels, and S representing the stones you have.
  * Each character in S is a type of stone you have.  You want to know how many of the stones you have are also jewels.
