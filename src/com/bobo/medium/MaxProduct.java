@@ -76,6 +76,12 @@ public class MaxProduct {
         return maxsofar;
     }
 
+    /**
+     * 在阅读了网上给出的最优解的代码后 自己实现
+     * 典型的dp问题
+     * @param arr
+     * @return
+     */
     public static int myMaxProduct(int [] arr){
         if (arr.length == 0){
             return 0;
