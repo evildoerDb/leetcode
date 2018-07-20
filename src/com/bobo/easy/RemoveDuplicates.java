@@ -11,10 +11,26 @@ package com.bobo.easy;
  */
 public class RemoveDuplicates {
 
-    public int removeDuplicates(int[] nums) {
+    /**
+     * 用两根指针
+     *
+     * @param nums
+     * @return
+     */
+    public static int removeDuplicates(int[] nums) {
         int index = 0;
-        //TODO
-        return index;
+        for(int i = 1 ; i < nums.length ;i++){
+            if (nums[index] != nums[i] ){
+                nums[++index] = nums[i];
+            }
+        }
+        return index + 1;
 
+    }
+
+    public static void main(String[] args) {
+        int [] arr = {0,0,1,1,1,2,2,3,3,4};
+        int length = removeDuplicates(arr);
+        System.out.println(length);
     }
 }
