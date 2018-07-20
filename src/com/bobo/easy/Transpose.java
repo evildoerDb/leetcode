@@ -9,6 +9,9 @@ package com.bobo.easy;
  * flipped over it's main diagonal, switching the row and column indices of the matrix.
  *
  *
+ * 矩阵转置
+ *
+ *
  * 867
  */
 public class Transpose {
