@@ -61,7 +61,8 @@ public class NumJewelsInStones {
         String J = "aA";
         String S = "aAAbbbb";
         //TODO
-        //待改进 此解法只是暴力解法
+        //可以利用装桶的思想来解决
+        // 待改进 此解法只是暴力解法
         int times = numJewelsInStones2(J,S);
         System.out.println(times);
     }
