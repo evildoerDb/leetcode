@@ -1,5 +1,7 @@
 package com.bobo.easy;
 
+import com.bobo.utils.ArrayUtils;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -23,37 +25,36 @@ public class SelfDividingNumbers {
 
     public static List<Integer> selfDividingNumbers(int left, int right) {
         List<Integer> list = new ArrayList<>();
-        for (int i = left; i <= right; i++){
-            List<Integer> resList = getList(i);
-            for (Integer temp : resList){
-                if (i % temp !=0){break;}
+        for (int i = left; i <= right; i++) {
+            if (check(i)) {
                 list.add(i);
             }
         }
-
         return list;
     }
 
-    public static List<Integer>  getList(Integer num){
-        List<Integer> list = new ArrayList<>();
-        char [] chars = String.valueOf(num).toCharArray();
-
-        for (int i = 0 ; i < chars.length ; i++){
-            list.add(Integer.parseInt(String.valueOf(chars[i])));
+    /**
+     * 检查num是否为自除数
+     * @param num
+     * @return
+     */
+    public static boolean check(int num) {
+        int cur = num;
+        while (cur != 0) {
+            int digit = cur % 10;
+            if (digit == 0 || num % digit != 0) {
+                return false;
+            }
+            cur /= 10;
         }
-        return list;
-
+        return true;
     }
 
     public static void main(String[] args) {
-        int left = 1;
-        int right =10;
-
-        //TODO
-        //错误  要重做
-        List<Integer> list = selfDividingNumbers(left,right);
-        for (Integer i : list){
-            System.out.print(i + ",");
+        List<Integer> list = selfDividingNumbers(1,22);
+        for (Integer num : list){
+            System.out.print(num + " ");
         }
+
     }
 }
