@@ -36,7 +36,7 @@ public class Search {
         int left = 0;
         int right = nums.length -1;
         while (left <= right){
-            int medium = (left + right) / 2;
+            int medium = (left + right) >>> 1;
             if (target == nums[medium]){
                 return medium;
             }else if (target > nums[medium]){
@@ -52,7 +52,8 @@ public class Search {
     public static void main(String[] args) {
         int [] arr = {-1,0,3,5,9,12};
 
-        int index = search(arr,2);
-        System.out.println(index);
+        int result = search(arr,9);
+        System.out.println("result = "+ result);
+
     }
 }
