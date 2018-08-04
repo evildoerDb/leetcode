@@ -36,7 +36,8 @@ public class Search {
         int left = 0;
         int right = nums.length -1;
         while (left <= right){
-            int medium = (left + right) / 2;
+//            int medium = (left + right) / 2;  这是不安全的做法
+            int medium = left + ((right - left) >>> 1);
             if (target == nums[medium]){
                 return medium;
             }else if (target > nums[medium]){
