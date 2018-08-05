@@ -1,5 +1,9 @@
 package com.bobo.sorted;
 
+import com.bobo.utils.ArrayUtils;
+
+import java.util.Arrays;
+
 /**
  * Created by evildoerdb_ on 2018/8/4
  *
@@ -59,11 +63,10 @@ public class QuickSort {
     }
 
     public static void main(String[] args) {
-        int[] arr = {4,51,1,5,62,14,5,32,6};
-        quickSort(arr,0,arr.length-1);
-
-        for (int i : arr){
-            System.out.print(i + " ");
-        }
+        int[] arr = ArrayUtils.getArray(10,20);
+        ArrayUtils.printArray(arr);
+        quickSort(arr,0,arr.length -1);
+        System.out.println();
+        ArrayUtils.printArray(arr);
     }
 }

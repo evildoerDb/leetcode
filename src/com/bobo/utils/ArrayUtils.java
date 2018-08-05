@@ -1,5 +1,7 @@
 package com.bobo.utils;
 
+import java.util.Random;
+
 /**
  * Created by evildoerDb on 2018/7/25 14:40
  *
@@ -15,11 +17,21 @@ public class ArrayUtils {
      */
     public static int [] getArray(int length,int range){
         int [] arr = new int[length];
-
+        Random random = new Random();
         for (int i = 0 ; i < length; i++){
-            arr[i] = (int)(Math.random() * range);
+            arr[i] = random.nextInt(range);
         }
 
         return arr;
+    }
+
+
+    public static void printArray(int [] arr){
+
+        for (int i : arr){
+            System.out.print(i + " ");
+        }
+
+
     }
 }
