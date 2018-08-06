@@ -1,5 +1,7 @@
 package com.bobo.easy;
 
+import java.util.LinkedList;
+
 /**
  * Created by evildoerDb on 2018/8/3 17:56
  *
@@ -28,7 +30,20 @@ public class NumArray {
         for (int k = i ; k <=j ; k++){
             result+=nums[k];
         }
-
         return result;
+    }
+
+    public static void main(String[] args) {
+        System.out.println(isNumber("abc"));
+    }
+
+    public static  boolean isNumber(String s){
+        try{
+            Double.parseDouble(s);
+            return true;
+        }catch (Exception e){
+            return false;
+        }
+
     }
 }
