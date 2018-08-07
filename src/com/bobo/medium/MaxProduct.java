@@ -87,8 +87,10 @@ public class MaxProduct {
             return 0;
         }
         int max = arr[0];
-        int maxPre = arr[0];//当前的索引前面的所有的最大值
-        int minPre = arr[0];//当前的索引前面的所有的最小值 主要是为了找出负数
+        //当前的索引前面的所有的最大值
+        int maxPre = arr[0];
+        //当前的索引前面的所有的最小值 主要是为了找出负数
+        int minPre = arr[0];
         int maxNow;//当前位置的最大值
         int minNow;//当前位置的最小值
         for (int i = 1; i < arr.length ; i++){
