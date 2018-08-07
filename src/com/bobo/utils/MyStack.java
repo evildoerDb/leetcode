@@ -4,17 +4,25 @@ package com.bobo.utils;
 /**
  * Created by evildoerDb on 2018/8/6 13:46
  *
- * 栈
+ * 双向链表实现栈
  */
 public  class MyStack<T> {
 
 
     class Node{
-        //值
+        /**
+         * 当前值
+         */
         T value;
-        //上一节点
+
+        /**
+         * 上一节点
+         */
         Node pre;
-        //下一节点
+
+        /**
+         * 下一节点
+         */
         Node next;
 
         public Node(T value, Node pre, Node next) {
