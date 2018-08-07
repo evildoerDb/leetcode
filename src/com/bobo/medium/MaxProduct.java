@@ -1,5 +1,8 @@
 package com.bobo.medium;
 
+import java.util.ArrayDeque;
+import java.util.Stack;
+
 /**
  * Created by evildoerDb on 2018/7/18 16:09
  *
@@ -46,7 +49,6 @@ public class MaxProduct {
             }
 
         }
-
         return max;
     }
 

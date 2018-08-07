@@ -82,6 +82,10 @@ public class MyQueue<T> {
         return (T) table[begin++];
     }
 
+    /**
+     * 是否为空
+     * @return
+     */
     public boolean isEmpty(){
         return end - begin == 0 ? true : false;
     }

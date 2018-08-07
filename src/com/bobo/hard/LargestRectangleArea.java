@@ -62,7 +62,7 @@ public class LargestRectangleArea {
         Stack<Integer> stack = new Stack<>();
         int maxArea = 0;
         for(int i = 0; i <= heights.length; i++){
-            int value = (i == heights.length ? 0 : heights[i]);
+            int value = (i == heights.length ? -1 : heights[i]);
             if(stack.isEmpty() || value >= heights[stack.peek()]){
                 stack.push(i);
             }else{
