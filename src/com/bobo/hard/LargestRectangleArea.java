@@ -121,9 +121,14 @@ public class LargestRectangleArea {
     public static void main(String[] args) {
         int [] arr = ArrayUtils.getArray(100000000,100000);
         long begin = System.currentTimeMillis();
-        largestRectangleArea2(arr);
+        largestRectangleArea(arr);
         long end = System.currentTimeMillis();
 
-        System.out.println("总共用了 ： " +(end - begin)+ "毫秒");
+        System.out.println("暴力解法总共用了 ： " +(end - begin)+ "毫秒");
+
+        long begin1 = System.currentTimeMillis();
+        largestRectangleArea1(arr);
+        long end1 = System.currentTimeMillis();
+        System.out.println("单调栈解法总共用了： " +(end1 - begin1) +"  毫秒");
     }
 }
