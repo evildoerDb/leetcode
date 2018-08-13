@@ -27,7 +27,7 @@ public class TwoSum {
      * @param target
      * @return
      */
-    public int[] twoSum(int[] nums, int target) {
+    public static int[] twoSum(int[] nums, int target) {
         Map<Integer, Integer> map = new HashMap<>();
         for(int i = 0 ; i < nums.length ; i++){
             if(map.containsKey(target-nums[i])){
@@ -36,5 +36,13 @@ public class TwoSum {
             map.put(nums[i], i);
         }
         return new int[2];
+    }
+
+    public static void main(String[] args) {
+        int [] arr = {2, 7, 11, 15};
+        int[] a = twoSum(arr,9);
+        for (int i : a){
+            System.out.print(i + " ");
+        }
     }
 }
