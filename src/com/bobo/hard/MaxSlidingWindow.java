@@ -29,6 +29,13 @@ import java.util.Queue;
  */
 public class MaxSlidingWindow {
 
+    /**
+     * 双端队列解法
+     * On time  Ok space
+     * @param nums
+     * @param k
+     * @return
+     */
     public int[] maxSlidingWindow(int[] nums, int k) {
         if (nums == null || k < 1 || nums.length < k){
             return new int[0];
