@@ -1,6 +1,7 @@
 package com.bobo.hard;
 
 import java.util.LinkedList;
+import java.util.PriorityQueue;
 import java.util.Queue;
 
 /**
@@ -48,7 +49,9 @@ public class MaxSlidingWindow {
             while (!queue.isEmpty() && nums[queue.peekLast()] <= nums[i]){
                 queue.pollLast();
             }
+
             queue.addLast(i);
+
             if (queue.peekFirst() == i - k){
                 queue.pollFirst();
             }
