@@ -14,7 +14,7 @@ package com.bobo.easy;
  * ５４１
  *
  */
-public class ＲeverseStr {
+public class ReverseStr {
 
     public String reverseStr(String s, int k) {
         char[] arr = s.toCharArray();
