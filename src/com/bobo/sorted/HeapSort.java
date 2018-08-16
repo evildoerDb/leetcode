@@ -26,7 +26,8 @@ public class HeapSort {
         for (int i = 0 ; i < arr.length ; i++){
             heapInsert(arr,i);
         }
-
+//        System.out.println();
+//        ArrayUtils.printArray(arr);
         int size = arr.length;
         swap(arr,0,--size);
         while (size > 0){

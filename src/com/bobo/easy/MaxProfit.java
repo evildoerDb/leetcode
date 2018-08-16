@@ -42,15 +42,19 @@ public class MaxProfit {
      */
     public static int maxProfit(int[] prices) {
 
-        int total = 0;
-        for (int i=0; i< prices.length-1; i++) {
-            if (prices[i+1]>prices[i]){
-                total += prices[i+1]-prices[i];
-            }
-
+        if (prices.length == 0) {
+            return 0 ;
         }
-
-        return total;
+        int result = 0 ;
+        int minPrice = prices[0] ;
+        for (int i = 0 ; i < prices.length ; ++i) {
+            if (prices[i] > minPrice) {
+                result = Math.max(result, prices[i] - minPrice) ;
+            } else{
+                minPrice = prices[i];
+            }
+        }
+        return  result ;
     }
 
     public static void main(String[] args) {

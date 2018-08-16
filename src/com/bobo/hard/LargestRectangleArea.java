@@ -71,6 +71,7 @@ public class LargestRectangleArea {
                 i--;
             }
         }
+
         return maxArea;
     }
 
