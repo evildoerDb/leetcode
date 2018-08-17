@@ -42,11 +42,11 @@ public class LongestPalindrome {
     }
 
     public static void main(String[] args) {
-//        String string = "bb";
-//        int result = longestPalindrome(string);
-//        System.out.println(result);
-        long current=System.currentTimeMillis();//当前时间毫秒数
-        long zero=current/(1000*3600*24)*(1000*3600*24)-TimeZone.getDefault().getRawOffset();
-        System.out.println(new Date(zero -518400000).toLocaleString());
+        String string = "abccccdd";
+        int result = longestPalindrome(string);
+        System.out.println(result);
+//        long current=System.currentTimeMillis();//当前时间毫秒数
+//        long zero=current/(1000*3600*24)*(1000*3600*24)-TimeZone.getDefault().getRawOffset();
+//        System.out.println(new Date(zero -518400000).toLocaleString());
     }
 }

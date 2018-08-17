@@ -1,5 +1,6 @@
 package com.bobo.easy;
 
+import java.util.Arrays;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.atomic.AtomicInteger;
 
@@ -29,7 +30,24 @@ import java.util.concurrent.atomic.AtomicInteger;
 public class LongestCommonPrefix {
 
     public String longestCommonPrefix(String[] strs) {
-        //TODO
-        return "";
+        StringBuilder result = new StringBuilder();
+
+        if (strs!= null && strs.length > 0) {
+
+            Arrays.sort(strs);
+
+            char[] first = strs[0].toCharArray();
+            char[] second = strs[strs.length - 1].toCharArray();
+
+            for (int i = 0; i < first.length; i++) {
+                if (second.length > i && second[i] == first[i]) {
+                    result.append(second[i]);
+                } else {
+                    return result.toString();
+                }
+            }
+        }
+        return result.toString();
+
     }
 }
