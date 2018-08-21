@@ -37,10 +37,10 @@ public class CountBits {
      * @return
      */
     public static int[] countBits1(int num) {
-        int[] f = new int[num + 1];
+        int[] arr = new int[num + 1];
         for (int i=1; i<=num; i++){
-            f[i] = f[i >> 1] + (i & 1);
+            arr[i] = arr[i >> 1] + (i & 1);
         }
-        return f;
+        return arr;
     }
 }
