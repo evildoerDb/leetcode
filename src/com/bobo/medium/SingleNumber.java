@@ -5,6 +5,7 @@ import java.time.LocalDate;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.Set;
+import java.util.TimeZone;
 
 /**
  * Created by evildoerDb on 2018/8/21 15:04
@@ -70,11 +71,6 @@ public class SingleNumber {
     }
 
     public static void main(String[] args) {
-//        int[] arr = {1,2,1,3,2,5};
-//        int[] result = singleNumber(arr);
-//        for (int i : result){
-//            System.out.print(i + " ");
-//        }
         SimpleDateFormat dateFormat = new SimpleDateFormat("MM-dd");
         System.out.println(dateFormat.format(new Date()));
     }
