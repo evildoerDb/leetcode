@@ -1,6 +1,7 @@
 package com.bobo.medium;
 
 import java.util.*;
+import java.util.concurrent.*;
 import java.util.stream.Collectors;
 
 /**
@@ -96,5 +97,34 @@ public class TopKFrequent {
             list.add(pq.poll().getKey());
         }
         return list;
+    }
+
+    public static void main(String[] args) {
+        ExecutorService executorService = Executors.newCachedThreadPool();
+        final Semaphore sm = new Semaphore(1);
+        for (int i = 0 ; i < 20; i++){
+            int index = i;
+            Runnable runnable = new Runnable() {
+                @Override
+                public void run() {
+                    try {
+                        //使用acquire()获取锁
+                        sm.acquire();
+                        System.out.println(String.format("[Thread-%s]任务id --- %s",Thread.currentThread().getId(),index));
+                        //睡眠1秒
+                        Thread.sleep(2000);
+                    }catch (Exception e){
+
+                    }finally {
+                        sm.release();
+                        System.out.println(String.format("[Thread-%s]任务id   realse--- %s",Thread.currentThread().getId(),index));
+                    }
+                }
+            };
+            executorService.execute(runnable);
+        }
+        executorService.shutdown();
+
+
     }
 }
