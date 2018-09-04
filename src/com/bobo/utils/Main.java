@@ -35,8 +35,9 @@ public class Main {
     }
 
     public static void main(String[] args) {
-        int num = 37685531;
-        digitOne(num);
+//        int num = 37685531;
+//        digitOne(num);
+        System.out.println(3 << 1);
 
     }
 

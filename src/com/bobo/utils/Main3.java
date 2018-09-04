@@ -39,8 +39,10 @@ public class Main3 {
 
         long die =0;
         for (int i = 1 ; i <= month - 36; i++){
-            die += i;
+            die += (fib(i + 1) - fib(i));
+//            die += i;
         }
+
 
         return total - sum - die;
     }
