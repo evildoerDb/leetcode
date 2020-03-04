@@ -29,6 +29,8 @@ public class JudgeSquareSum {
         }
 
         int left =0;
+
+        //c 可以表示成 x^2 x肯定大于a和b
         int right = (int)Math.sqrt(c);
 
         while (left <= right){
