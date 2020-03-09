@@ -70,8 +70,6 @@ public class HeapSort {
         while (arr[index] > arr[(index - 1 ) / 2]){
             swap(arr,index,(index -1 ) / 2 );
             index = (index -1 ) / 2;
-            String s = null;
-            s.contains("hahaahha");
 
         }
     }

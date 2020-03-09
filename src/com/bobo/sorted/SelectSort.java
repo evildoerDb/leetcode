@@ -8,15 +8,15 @@ package com.bobo.sorted;
 public class SelectSort {
 
     public static void selectSort(int [] arr){
-        if (arr == null || arr.length < 2){
-            return;
-        }
-        for (int i = 0 ; i < arr.length -1 ; i++){
+        int length = arr.length;
+        for (int i = 0; i < length; i++) {
             int minIndex = i;
-            for (int j = i+1; j < arr.length;j++){
-                minIndex = arr[minIndex] > arr[j] ? j : minIndex;
+            for (int j = i + 1; j < length; j++) {
+                if (arr[j] < arr[minIndex]) {
+                    minIndex = j;
+                }
             }
-            swap(arr,i,minIndex);
+            swap(arr, minIndex, i);
         }
     }
     private static void swap(int[] arr, int j, int i) {
