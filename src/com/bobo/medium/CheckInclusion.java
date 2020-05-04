@@ -50,7 +50,6 @@ public class CheckInclusion {
         if (validate(arr, temp)) {
             return true;
         }
-
         for (int i = s1.length(); i < s2.length(); i++) {
 
 
