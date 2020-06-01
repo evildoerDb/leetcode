@@ -19,7 +19,7 @@ public class QuickSort {
      */
     public static void quickSort(int [] arr , int l, int r){
         if (l < r){
-            swap(arr,l + ((r - l ) >>> 1),r);
+//            swap(arr,l + ((r - l ) >>> 1),r);
             int [] p = partition(arr,l,r);
 
             //等于区域的左边界递归
